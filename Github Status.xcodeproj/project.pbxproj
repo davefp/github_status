@@ -447,6 +447,7 @@
 				1BEAAEC116777374009875FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BEAAEC216777374009875FB /* Build configuration list for PBXNativeTarget "Github StatusTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +456,7 @@
 				1BEAAEC416777374009875FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

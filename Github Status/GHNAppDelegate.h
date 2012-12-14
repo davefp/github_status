@@ -8,8 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class GHNTrack;
+
 @interface GHNAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) NSStatusItem *statusItem;
+@property (weak) IBOutlet NSMenu *statusMenu;
+
+@property (strong) NSTimer *updateTimer;
+@property (strong) NSMutableData *receivedData;
+
+- (void)onTimerFire:(NSTimer*)theTimer;
+- (void)scheduleTimer;
 
 @end
