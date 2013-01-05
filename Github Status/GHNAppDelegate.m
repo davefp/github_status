@@ -34,10 +34,10 @@
 }
 
 - (void)onTimerFire:(NSTimer*)theTimer {
-    [self doNetworkThing];
+    [self fetchGithubStatus];
 }
 
-- (void)doNetworkThing {
+- (void)fetchGithubStatus {
     
     NSURL *URL = [NSURL URLWithString: @"https://status.github.com/api/status.json"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL: URL];
@@ -68,8 +68,11 @@ didReceiveResponse:(NSURLResponse *)response {
     NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: self.receivedData options: NSJSONReadingMutableContainers error: nil];
     
     self.statusItem.title = [JSON valueForKey:@"status"];
-    
+}
 
+- (IBAction)refresh:(id)sender {
+    self.statusItem.title = @"fetching...";
+    [self fetchGithubStatus];
 }
 
 @end

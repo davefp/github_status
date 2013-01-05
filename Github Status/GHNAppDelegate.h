@@ -21,4 +21,6 @@
 - (void)onTimerFire:(NSTimer*)theTimer;
 - (void)scheduleTimer;
 
+- (IBAction)refresh:(id)sender;
+
 @end
